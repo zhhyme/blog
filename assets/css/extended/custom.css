@@ -40,6 +40,26 @@
     padding: 8px 14px;
 }
 
+.post-single .md-content .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .post-single .md-content table:not(.highlighttable, .highlight table) {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.post-single .md-content .katex-display,
+.post-single .md-content table:not(.highlighttable, .highlight table) {
+    scrollbar-width: thin;
+    scrollbar-color: var(--tertiary) transparent;
+}
+
 .post-single .md-content .highlight:not(table),
 .post-single .md-content .highlight table,
 .post-single .md-content pre code {
