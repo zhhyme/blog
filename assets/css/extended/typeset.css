@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "Noto Serif SC";
+    src: url("/fonts/NotoSerifSC-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans SC";
+    src: url("/fonts/NotoSansSC-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans SC";
+    src: url("/fonts/NotoSansSC-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-serif: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN",
+        "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", Georgia,
+        "Times New Roman", serif;
+    --font-sans: "Noto Sans SC", "Source Han Sans SC", "Source Han Sans CN",
+        "Noto Sans CJK SC", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "WenQuanYi Micro Hei", Roboto, Arial, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono",
+        Menlo, Consolas, "Cascadia Mono", "Liberation Mono", "Courier New",
+        monospace;
+
+    --font-heading: var(--font-serif);
+    --font-reading: var(--font-sans);
+}
+
+body {
+    font-family: var(--font-sans);
+}
+
+.post-single :is(.post-description, .md-content) {
+    font-family: var(--font-reading);
+}
+
+.home-info {
+    font-family: var(--font-reading);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+}
+
+.post-single .md-content,
+.home-info .entry-content {
+    line-height: 1.75;
+    letter-spacing: 0;
+}
+
+.post-single .md-content {
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.post-single .md-content :is(h1, h2, h3, h4, h5, h6) {
+    text-wrap: balance;
+}
+
+.post-single .md-content h1 {
+    line-height: 1.25;
+}
+
+.post-single .md-content h2 {
+    line-height: 1.3;
+}
+
+.post-single .md-content h3 {
+    line-height: 1.4;
+}
+
+.post-single .md-content p {
+    text-wrap: pretty;
+}
+
+.first-entry .entry-header h2 {
+    font-size: 36px;
+}
+
+.entry-header h2 {
+    font-size: 22px;
+}
+
+.post-entry .entry-content {
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.post-single .md-content table:not(.highlighttable, .highlight table) {
+    font-family: var(--font-sans);
+    font-size: 0.9em;
+    line-height: 1.6;
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: var(--font-mono);
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+.post-single .md-content pre code {
+    white-space: pre-wrap;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    overflow-x: hidden;
+}

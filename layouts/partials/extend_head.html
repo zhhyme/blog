@@ -1,0 +1,9 @@
+{{- /* 首屏字体：标题用宋体 Bold，正文用黑体 Regular。
+       这两种全站每页都要，所以不再按页型分支；配合 font-display: swap 缩短换字窗口。 */ -}}
+
+<link rel="preload" href="/fonts/NotoSerifSC-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/NotoSansSC-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+{{- if or .Params.math site.Params.math }}
+{{ partial "math.html" . }}
+{{- end }}

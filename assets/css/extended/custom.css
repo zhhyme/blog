@@ -1,0 +1,85 @@
+:root[data-theme="light"] {
+    --primary: #242424;
+    --content: #3a3a39;
+    --secondary: #6e6e6b;
+    --tertiary: #dbdbd6;
+    --border: #e9e9e5;
+    --theme: #fbfbf9;
+    --entry: #fffefd;
+    --code-bg: #f5f5f1;
+    --code-block-bg: #1f1f1d;
+}
+
+.logo a {
+    font-size: 21px;
+}
+
+.menu a {
+    color: var(--secondary);
+}
+
+.menu .active {
+    color: var(--primary);
+}
+
+.home-info {
+    min-height: 220px;
+    margin-bottom: calc(var(--gap) * 1.75);
+}
+
+.home-info .entry-content p {
+    margin-block: 0.85em;
+}
+
+.post-single .md-content blockquote {
+    border-inline-start-color: var(--tertiary);
+}
+
+.post-single .md-content table th,
+.post-single .md-content table:not(.highlighttable, .highlight table) td {
+    padding: 8px 14px;
+}
+
+.post-single .md-content .highlight:not(table),
+.post-single .md-content .highlight table,
+.post-single .md-content pre code {
+    border-radius: 0;
+}
+
+.post-single .md-content pre code {
+    padding: 1.2em 1.4em;
+}
+
+.post-single .md-content :not(pre) > code {
+    color: var(--primary);
+}
+
+.post-single .chroma .lnt {
+    padding-left: 0;
+}
+
+.post-description {
+    margin-top: 8px;
+    color: var(--secondary);
+}
+
+.post-meta {
+    margin-top: 8px;
+}
+
+.footer {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    line-height: 20px;
+}
+
+.footer .signature {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer .signature svg {
+    height: 28px;
+    width: auto;
+    color: var(--secondary);
+}

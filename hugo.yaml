@@ -1,0 +1,166 @@
+baseURL: "https://blog.zhhy.com/"
+
+locale: "zh-cn"
+languageCode: "zh"
+defaultContentLanguage: zh
+
+title: "zhhy's blog"
+theme: PaperMod
+
+# 基础构建
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableGitInfo: false
+
+minify:
+  minifyOutput: true
+
+# 输出
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 作者
+author:
+  name: "zhhy"
+  email: "mail@zhhy.me"
+
+summaryLength: 120
+
+# 导航
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 10
+
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
+
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 30
+
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 40
+
+
+# PaperMod 参数
+params:
+  env: production
+
+  title: "zhhy's blog"
+
+  description: "记录一些数学、计算机科学与技术实践的内容"
+
+  author: "zhhy"
+
+  # Open Graph 默认图片
+  # 对应 static/images/og-default.png
+  images:
+    - "/images/og-default.png"
+
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  # 首页
+  homeInfoParams:
+    Title: "👋 欢迎来到我的博客"
+    Content: "你好，这里是zhhy。记录一些数学、计算机科学与技术实践的内容。"
+
+
+  # 文章显示
+  ShowReadingTime: false
+  ShowWordCount: false
+  ShowDate: true
+
+  ShowToc: true
+  TocOpen: false
+
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+
+  ShowShareButtons: false
+
+
+  # 代码
+  ShowCodeCopyButtons: true
+
+  assets:
+    disableHLJS: true
+
+
+  # 数学公式
+  # 文章 front matter 设置 math: true
+  math: false
+
+
+  # RSS
+  ShowRssButtonInSectionTermList: true
+
+
+  # 搜索
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 2
+
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+
+
+  # 社交
+  socialIcons:
+    - name: github
+      url: "https://github.com/zhhyme"
+    - name: rss
+      url: "/index.xml"
+
+
+
+# Markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+
+    extensions:
+      passthrough:
+        enable: true
+
+        delimiters:
+          block:
+            - - "$$"
+              - "$$"
+
+            - - "\\["
+              - "\\]"
+
+          inline:
+            - - "\\("
+              - "\\)"
+
+
+  # Chroma
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    noClasses: false
+    style: github
