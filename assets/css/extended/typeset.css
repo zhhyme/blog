@@ -94,9 +94,11 @@ h6 {
     line-height: 1.4;
 }
 
+    /*
 .post-single .md-content p {
     text-wrap: pretty;
 }
+    */
 
 .first-entry .entry-header h2 {
     font-size: 36px;
